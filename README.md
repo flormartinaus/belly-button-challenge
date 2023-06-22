@@ -1,5 +1,5 @@
 # belly-button-challenge
 
-![Belly](belly-button-challenge/static/jsBelly1.jpg)
+![Belly](/static/js/Belly1.jpg)
 
  
