@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta tags -->
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+
+    .jumbotron {
+      background-color: #b75b33;
+      color: #fff;
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    #header-image {
+      width: 300px;
+      height: auto;
+    }
+
+    .well {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+
+    h5 {
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 0;
+    }
+
+    .panel-primary {
+      border-color: #33b794;
+    }
+
+    .panel-heading {
+      background-color: #b75033;
+      color: #fff;
+      padding: 10px 15px;
+      border-bottom: 1px solid #b76133;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+
+    .panel-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 0;
+    }
+
+    .panel-body {
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1 style="color: #fff;">Belly Button Biodiversity Dashboard</h1>
+        <p style="color: #fff;">Use the interactive charts below to explore the dataset</p>
+        <img id="header-image" src="./static/js/Belly1.jpg" alt="Header Image">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer" style="text-align: center;">
+    <span class="bottom">&copy; Copyright Maria Florencia Martin 2023</span>
+  </footer>
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="./static/js/app.js"></script>
